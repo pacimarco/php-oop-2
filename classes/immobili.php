@@ -1,15 +1,16 @@
 <?php
+require_once __DIR__.'/../trait/indirizzo.php';
 class Building {
+    use Indirizzo;
     
-    public $address;
     public $type;
     public $condition;
     public $area;
 
 
-public function __construct($address, $type, $condition, $area) {
+public function __construct( $type, $condition, $area) {
     
-    $this->address = $address;
+    
     $this->type = $type;
     $this->condition = $condition;
     $this->area = $area;

@@ -6,14 +6,14 @@ class propertyForRent extends Building{
     public $rentPrice;
     public $availability;
 
-    public function __construct($address, $type, $condition, $area,$rentPrice,$availability) {
-    parent::__construct($address, $type, $condition, $area);
+    public function __construct($type, $condition, $area,$rentPrice,$availability) {
+    parent::__construct( $type, $condition, $area);
     $this->rentPrice = $rentPrice;
     $this->availability = $availability;
     }
 //funzione per stampare info
     public function houseInfo(){
-        echo "immobile selezionato: " .$this->address .' - '.$this->area. ' - '.$this->rentPrice."<br>";
+        echo "immobile selezionato: " .' - '.$this->area. ' - '.$this->rentPrice."<br>";
             
     }
         
